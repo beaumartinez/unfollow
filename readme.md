@@ -9,7 +9,7 @@ Twitter account first.
 
 ## Usage
 
-    unfollow.py <foauth.org email> <foauth.org password>
+    ./unfollow.py <foauth.org email> <foauth.org password>
 
 Unfollow will print authentication or rate limit errors. Run it a few times
 just to be safe.
