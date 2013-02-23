@@ -16,7 +16,7 @@ just to be safe.
 
 ## Caveats
 
-I couldn't be assed doing [pagination], so Unfollow only checks the first
+I couldn't be arsed doing [pagination], so Unfollow only checks the first
 (however Twitter defines that) 5,000 accounts you follow and followers.
 
 ## Disclaimer
