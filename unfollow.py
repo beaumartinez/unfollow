@@ -2,8 +2,8 @@
 
 from sys import argv, exit
 
-from requests_foauth import Foauth
 from requests import Session
+from requests_foauth import Foauth
 
 if __name__ == '__main__':
     try:
