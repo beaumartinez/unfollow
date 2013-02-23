@@ -39,22 +39,3 @@ if __name__ == '__main__':
 
         if unfollow_response.status_code != 200:
             print unfollow_response.status_code, unfollow_response.text
-
-    # Sanity check. If we've unfollowed anyone we shouldn't have, follow them
-    # again
-
-    following_response = session.get('https://api.twitter.com/1.1/friends/ids.json')
-
-    following = following_response.json() 
-    following = following['ids']
-    following = frozenset(following)
-
-    to_follow = followers - following
-
-    for user in to_follow:
-        follow_response = session.post('https://api.twitter.com/1.1/friendships/create.json', {
-            'user_id': user,
-        })
-
-        if follow_response.status_code != 200:
-            print follow_response.status_code, follow_response.text
