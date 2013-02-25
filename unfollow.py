@@ -21,19 +21,19 @@ if __name__ == '__main__':
     authentication_response = session.get('https://api.twitter.com/1.1/account/verify_credentials.json')
 
     if authentication_response.status_code != 200:
-        print authentication_response.status_code, authentication_response.content 
+        print authentication_response.status_code, authentication_response.content
 
         exit(1)
 
     followers_response = session.get('https://api.twitter.com/1.1/followers/ids.json')
 
-    followers = followers_response.json() 
+    followers = followers_response.json()
     followers = followers['ids']
     followers = frozenset(followers)
 
     following_response = session.get('https://api.twitter.com/1.1/friends/ids.json')
 
-    following = following_response.json() 
+    following = following_response.json()
     following = following['ids']
     following = frozenset(following)
 
